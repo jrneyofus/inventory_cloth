@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #26252B;
+}
+
+.font-tag {
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 0.02em;
+}
+
+/* stitched dashed border used on the "care tag" chips */
+.stitch-border {
+  border: 1.5px dashed currentColor;
+}
+
+::selection {
+  background-color: #3C4D73;
+  color: #FAF7F1;
+}
+
+/* visible keyboard focus, accessibility */
+:focus-visible {
+  outline: 2px solid #3C4D73;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
